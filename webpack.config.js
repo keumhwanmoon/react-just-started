@@ -5,7 +5,7 @@ var webpack = require('webpack');
  */
 var config = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/app/App.js",
+  entry:  __dirname + "/app/Select.js",
   output: {
     path: __dirname + "/public",
     filename: "bundle.js"
@@ -26,7 +26,7 @@ var config = {
     historyApiFallback: true,
     inline: true
   },
-}
+};
 
 /*
  * If bundling for production, optimize output

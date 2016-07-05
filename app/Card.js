@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import CheckList from './CheckList';
 import marked from 'marked';
 
@@ -33,11 +33,11 @@ class Card extends Component {
             left: 0,
             width: 7,
             backgroundColor: this.props.color
-        }
+        };
 
         return (
             <div className="card">
-                <div style={sideColor}/>
+                <div style={sideColor}></div>
                 <div className={
                     this.state.showDetails ? "card_title card_title--is-open" : "card_title"
                 } onClick={this.toggleDetails.bind(this)}>
@@ -48,5 +48,13 @@ class Card extends Component {
         );
     }
 }
+
+Card.protoTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    color: PropTypes.string,
+    tasks: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default Card;

@@ -5,7 +5,7 @@ var webpack = require('webpack');
  */
 var config = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/app/Uncontrolled.js",
+  entry:  [__dirname + "/app/Uncontrolled.js", __dirname + "/app/FocusText.js"],
   output: {
     path: __dirname + "/public",
     filename: "bundle.js"
@@ -25,7 +25,7 @@ var config = {
     colors: true,
     historyApiFallback: true,
     inline: true
-  },
+  }
 };
 
 /*
@@ -40,6 +40,6 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {NODE_ENV: JSON.stringify('production')}
     })
   ];
-};
+}
 
 module.exports = config;

@@ -21,4 +21,4 @@ class Uncontrolled extends Component {
     }
 }
 
-render(<Uncontrolled />, document.body);
+render(<Uncontrolled />, document.getElementById('unControlled'));
